@@ -1,0 +1,9 @@
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\bin\Debug\negocio.dll
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\bin\Debug\negocio.pdb
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\bin\Debug\dominio.dll
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\bin\Debug\dominio.pdb
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\obj\Debug\negocio.dll
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\negocio\obj\Debug\negocio.pdb

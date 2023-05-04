@@ -1,0 +1,6 @@
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\dominio\bin\Debug\dominio.dll
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\dominio\bin\Debug\dominio.pdb
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\dominio\obj\Debug\dominio.dll
+C:\Users\Outlet VL\source\repos\LucaMMonti\Equipo4.TP2\Grupo4TPWinform\dominio\obj\Debug\dominio.pdb
