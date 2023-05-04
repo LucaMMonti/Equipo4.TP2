@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using dominio;
+//using dominio;
 using negocio;
 
 namespace Grupo4TPWinform
 {
     public partial class Form1 : Form
     {
-        private List<Articulo>listaArticulos;
+        private List<ArticuloNegocio>listaArticulos;
         public Form1()
         {
             InitializeComponent();

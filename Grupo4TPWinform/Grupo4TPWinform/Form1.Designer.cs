@@ -43,7 +43,7 @@
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.Size = new System.Drawing.Size(506, 175);
             this.dgvArticulos.TabIndex = 0;
-            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
+//            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -61,7 +61,7 @@
             this.pbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticulos.TabIndex = 2;
             this.pbArticulos.TabStop = false;
-            this.pbArticulos.Click += new System.EventHandler(this.pbArticulos_Click);
+//            this.pbArticulos.Click += new System.EventHandler(this.pbArticulos_Click);
             // 
             // Form1
             // 
