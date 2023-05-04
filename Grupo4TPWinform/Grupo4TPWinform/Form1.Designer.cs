@@ -31,6 +31,7 @@
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbArticulos = new System.Windows.Forms.PictureBox();
+            this.lblListarArticulos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulos)).BeginInit();
@@ -39,11 +40,10 @@
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 34);
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 115);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.Size = new System.Drawing.Size(506, 175);
             this.dgvArticulos.TabIndex = 0;
-//            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -55,19 +55,29 @@
             // 
             // pbArticulos
             // 
-            this.pbArticulos.Location = new System.Drawing.Point(524, 34);
+            this.pbArticulos.Location = new System.Drawing.Point(537, 115);
             this.pbArticulos.Name = "pbArticulos";
-            this.pbArticulos.Size = new System.Drawing.Size(249, 178);
+            this.pbArticulos.Size = new System.Drawing.Size(230, 178);
             this.pbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticulos.TabIndex = 2;
             this.pbArticulos.TabStop = false;
-//            this.pbArticulos.Click += new System.EventHandler(this.pbArticulos_Click);
+            // 
+            // lblListarArticulos
+            // 
+            this.lblListarArticulos.AutoSize = true;
+            this.lblListarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListarArticulos.Location = new System.Drawing.Point(8, 37);
+            this.lblListarArticulos.Name = "lblListarArticulos";
+            this.lblListarArticulos.Size = new System.Drawing.Size(130, 20);
+            this.lblListarArticulos.TabIndex = 3;
+            this.lblListarArticulos.Text = "Lista de Articulos";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(779, 343);
+            this.Controls.Add(this.lblListarArticulos);
             this.Controls.Add(this.pbArticulos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvArticulos);
@@ -78,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -86,6 +97,7 @@
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbArticulos;
+        private System.Windows.Forms.Label lblListarArticulos;
     }
 }
 
