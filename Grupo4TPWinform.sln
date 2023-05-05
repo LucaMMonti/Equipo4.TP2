@@ -3,16 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "version1", "Grupo4TPWinform\version1.csproj", "{1EA8F4D4-4522-4CDA-B785-B461826FEF10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinformApp", "Grupo4TPWinform\WinformApp.csproj", "{1EA8F4D4-4522-4CDA-B785-B461826FEF10}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{D464B8B8-9D82-4CC6-B0EF-50F0AEFCD0CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{6B0A65ED-C94C-4221-A273-67D354413D38}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{E0EECA53-85E1-45C9-B326-0510C5A6849F}"
-	ProjectSection(SolutionItems) = preProject
-		Clase_Imagen.cs = Clase_Imagen.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

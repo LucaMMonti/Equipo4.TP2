@@ -5,58 +5,45 @@ using System.Text;
 using System.Threading.Tasks;
 using dominio;
 using System.Data.SqlClient;
-using System.Collections;
-
 
 namespace negocio
 {
     public class ArticuloNegocio
     {
-        public List<Articulo> listar()
+        public List<Articulo> listar() 
         {
-            List<Articulo> lista = new List<Articulo>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
-
+            List<Articulo> lista = new List<Articulo>(); 
+            AccesoDatos datos = new AccesoDatos(); 
 
             try
             {
+                datos.setearConsulta("Select Codigo, Nombre, Descripcion, Precio From Articulos");
+                datos.ejecutarLectura();
 
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT ID, CODIGO, NOMBRE, DESCRIPCION, IDMARCA, IDCATEGORIA, PRECIO FROM ARTICULOS";
-                comando.Connection = conexion;
-
-                conexion.Open();
-                lector = comando.ExecuteReader();
-
-                while (lector.Read())
+                while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.idArticulo = lector.GetInt32(0);
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["Descripcion"];
-                    //aux.Marca = (Marca)lector["IdMarca"];
-                    //aux.Categoria = (Categoria)lector["IdCategoria"];
-                    aux.Precio = (decimal)lector["Precio"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    //aux.Marca = (Marca)datos.Lector["IdMarca"];
+                    //aux.Categoria = (Categoria)datos.Lector["IdCategoria"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
 
                     lista.Add(aux);
-
                 }
-
-                conexion.Close();
                 return lista;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
-        }
-
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            
+            
+        } 
     }
 }
-
-
