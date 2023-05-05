@@ -73,24 +73,28 @@ namespace Grupo4TPWinform
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
             this.buscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarToolStripMenuItem.Text = "Buscar";
+            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
             // 
             // agregarArticulosToolStripMenuItem
             // 
             this.agregarArticulosToolStripMenuItem.Name = "agregarArticulosToolStripMenuItem";
             this.agregarArticulosToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.agregarArticulosToolStripMenuItem.Text = "Agregar Articulos";
+            this.agregarArticulosToolStripMenuItem.Click += new System.EventHandler(this.agregarArticulosToolStripMenuItem_Click);
             // 
             // modificarArticulosToolStripMenuItem
             // 
             this.modificarArticulosToolStripMenuItem.Name = "modificarArticulosToolStripMenuItem";
             this.modificarArticulosToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
             this.modificarArticulosToolStripMenuItem.Text = "Modificar Articulos";
+            this.modificarArticulosToolStripMenuItem.Click += new System.EventHandler(this.modificarArticulosToolStripMenuItem_Click);
             // 
             // eliminarArticulosToolStripMenuItem
             // 
             this.eliminarArticulosToolStripMenuItem.Name = "eliminarArticulosToolStripMenuItem";
             this.eliminarArticulosToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.eliminarArticulosToolStripMenuItem.Text = "Eliminar Articulos";
+            this.eliminarArticulosToolStripMenuItem.Click += new System.EventHandler(this.eliminarArticulosToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
