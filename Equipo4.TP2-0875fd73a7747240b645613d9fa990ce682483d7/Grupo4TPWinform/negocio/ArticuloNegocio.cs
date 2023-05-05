@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using dominio;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 
 namespace negocio
 {
@@ -13,7 +14,7 @@ namespace negocio
         public List<Articulo> listar() 
         {
             List<Articulo> lista = new List<Articulo>(); 
-            AccesoDatos datos = new AccesoDatos(); 
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
@@ -26,8 +27,8 @@ namespace negocio
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    //aux.Marca = (Marca)datos.Lector["IdMarca"];
-                    //aux.Categoria = (Categoria)datos.Lector["IdCategoria"];
+                    aux.IdMarca = (int)datos.Lector["IdMarca"];
+                    aux.IdCategoria = (int)datos.Lector["IdCategoria"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
                     lista.Add(aux);
@@ -42,8 +43,24 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
-            
-            
-        } 
+        }
+        public void agregar(Articulo nuevo)
+        {
+          AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values( '" + nuevo.Codigo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "'," + nuevo.IdMarca + "," + nuevo.IdCategoria + "," + nuevo.Precio + ")");
+               datos.ejecutarAccion();
+              
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion(); 
+            }
+        }
     }
 }
