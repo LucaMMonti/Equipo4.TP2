@@ -4,3 +4,9 @@ C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a77472
 C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.dll
 C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.pdb
+C:\Users\SONY\Documents\Facu\Repo primer proyecto\tp2\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\bin\Debug\dominio.dll
+C:\Users\SONY\Documents\Facu\Repo primer proyecto\tp2\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\bin\Debug\dominio.pdb
+C:\Users\SONY\Documents\Facu\Repo primer proyecto\tp2\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\SONY\Documents\Facu\Repo primer proyecto\tp2\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\SONY\Documents\Facu\Repo primer proyecto\tp2\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.dll
+C:\Users\SONY\Documents\Facu\Repo primer proyecto\tp2\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.pdb

@@ -1,9 +1,0 @@
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\bin\Debug\negocio.dll
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\bin\Debug\negocio.pdb
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\bin\Debug\dominio.dll
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\bin\Debug\dominio.pdb
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\obj\Debug\negocio.csproj.CopyComplete
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\obj\Debug\negocio.dll
-C:\Users\SONY\Documents\Facu\Programacion\luca ultimo\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\negocio\obj\Debug\negocio.pdb
