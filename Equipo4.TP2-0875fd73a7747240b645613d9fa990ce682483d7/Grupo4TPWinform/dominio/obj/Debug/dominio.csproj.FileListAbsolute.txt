@@ -16,3 +16,9 @@ C:\Users\Buda\Desktop\repoviejo\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d
 C:\Users\Buda\Desktop\repoviejo\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\Buda\Desktop\repoviejo\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.dll
 C:\Users\Buda\Desktop\repoviejo\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.pdb
+C:\Users\Outlet VL\Desktop\El tp version final\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\bin\Debug\dominio.dll
+C:\Users\Outlet VL\Desktop\El tp version final\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\bin\Debug\dominio.pdb
+C:\Users\Outlet VL\Desktop\El tp version final\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Outlet VL\Desktop\El tp version final\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Outlet VL\Desktop\El tp version final\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.dll
+C:\Users\Outlet VL\Desktop\El tp version final\Equipo4.TP2\Equipo4.TP2-0875fd73a7747240b645613d9fa990ce682483d7\Grupo4TPWinform\dominio\obj\Debug\dominio.pdb

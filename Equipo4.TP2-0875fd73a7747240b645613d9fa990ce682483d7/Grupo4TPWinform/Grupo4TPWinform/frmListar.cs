@@ -30,6 +30,9 @@ namespace Grupo4TPWinform
 
         }
 
+        private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

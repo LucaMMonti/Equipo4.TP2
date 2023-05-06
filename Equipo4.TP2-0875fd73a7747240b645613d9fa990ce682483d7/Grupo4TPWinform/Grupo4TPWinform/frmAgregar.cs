@@ -28,8 +28,8 @@ namespace Grupo4TPWinform
             {
                 art.Codigo = txtCodigo.Text;
                 art.Nombre = txtNombre.Text;
-                art.IdMarca = int.Parse(txtMarca.Text);
-                art.IdCategoria = int.Parse(txtCategoria.Text);
+               // art.IdMarca = int.Parse(txtMarca.Text);
+                // art.IdCategoria = int.Parse(txtCategoria.Text);
                 art.Descripcion = txtDescripcion.Text;
                 art.Precio = decimal.Parse(txtPrecio.Text);
 

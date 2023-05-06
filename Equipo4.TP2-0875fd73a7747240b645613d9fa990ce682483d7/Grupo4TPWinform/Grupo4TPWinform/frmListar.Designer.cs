@@ -30,7 +30,9 @@
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.lblListar = new System.Windows.Forms.Label();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulos
@@ -52,11 +54,21 @@
             this.lblListar.TabIndex = 1;
             this.lblListar.Text = "Listado de Articulos";
             // 
+            // dgvMarcas
+            // 
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Location = new System.Drawing.Point(529, 106);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.Size = new System.Drawing.Size(260, 205);
+            this.dgvMarcas.TabIndex = 2;
+            this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
+            // 
             // frmListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 323);
+            this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.lblListar);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "frmListar";
@@ -64,6 +76,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,6 +86,7 @@
 
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Label lblListar;
+        private System.Windows.Forms.DataGridView dgvMarcas;
     }
 }
 
