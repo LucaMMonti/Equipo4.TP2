@@ -14,6 +14,7 @@ namespace Grupo4TPWinform
 {
     public partial class frmListar : Form
     {
+        private List<Articulo> listaArt;
         public frmListar()
         {
             InitializeComponent();
@@ -22,15 +23,29 @@ namespace Grupo4TPWinform
         private void Form1_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            dgvArticulos.DataSource = negocio.listar();
+            listaArt = negocio.listar();
+            dgvArticulos.DataSource = listaArt;
         }
 
-        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        /*
+                private void cargarImagen(string imagen)
+                {
+                    try
+                    {
+                        pbxArticulos.Load(imagen);
+                    }
+                    catch (Exception ex)
+                    {
+                        pbxArticulos.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+                    }
+                }*/
+
+        private void dgvImagen_SelectionChanged(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

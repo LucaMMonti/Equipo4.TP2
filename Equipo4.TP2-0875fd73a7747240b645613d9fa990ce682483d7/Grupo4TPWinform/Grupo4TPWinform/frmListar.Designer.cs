@@ -30,45 +30,77 @@
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.lblListar = new System.Windows.Forms.Label();
-            this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            this.pbxArticulos = new System.Windows.Forms.PictureBox();
+            this.dgvImagen = new System.Windows.Forms.DataGridView();
+            this.lbImagen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 106);
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 91);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(506, 205);
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulos.Size = new System.Drawing.Size(736, 305);
             this.dgvArticulos.TabIndex = 0;
-            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // lblListar
             // 
             this.lblListar.AutoSize = true;
-            this.lblListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListar.Location = new System.Drawing.Point(25, 41);
+            this.lblListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblListar.Location = new System.Drawing.Point(252, 43);
             this.lblListar.Name = "lblListar";
-            this.lblListar.Size = new System.Drawing.Size(148, 20);
+            this.lblListar.Size = new System.Drawing.Size(251, 31);
             this.lblListar.TabIndex = 1;
             this.lblListar.Text = "Listado de Articulos";
             // 
-            // dgvMarcas
+            // pbxArticulos
             // 
-            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(529, 106);
-            this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.Size = new System.Drawing.Size(260, 205);
-            this.dgvMarcas.TabIndex = 2;
-            this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
+            this.pbxArticulos.Location = new System.Drawing.Point(422, 402);
+            this.pbxArticulos.Name = "pbxArticulos";
+            this.pbxArticulos.Size = new System.Drawing.Size(245, 147);
+            this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulos.TabIndex = 2;
+            this.pbxArticulos.TabStop = false;
+            // 
+            // dgvImagen
+            // 
+            this.dgvImagen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvImagen.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvImagen.Location = new System.Drawing.Point(29, 440);
+            this.dgvImagen.MultiSelect = false;
+            this.dgvImagen.Name = "dgvImagen";
+            this.dgvImagen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvImagen.Size = new System.Drawing.Size(379, 109);
+            this.dgvImagen.TabIndex = 3;
+            this.dgvImagen.SelectionChanged += new System.EventHandler(this.dgvImagen_SelectionChanged);
+            this.dgvImagen.Click += new System.EventHandler(this.dgvImagen_SelectionChanged);
+            // 
+            // lbImagen
+            // 
+            this.lbImagen.AutoSize = true;
+            this.lbImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImagen.Location = new System.Drawing.Point(116, 413);
+            this.lbImagen.Name = "lbImagen";
+            this.lbImagen.Size = new System.Drawing.Size(213, 24);
+            this.lbImagen.TabIndex = 4;
+            this.lbImagen.Text = "Visualizador de articulos";
+            this.lbImagen.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmListar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 323);
-            this.Controls.Add(this.dgvMarcas);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(794, 561);
+            this.Controls.Add(this.lbImagen);
+            this.Controls.Add(this.dgvImagen);
+            this.Controls.Add(this.pbxArticulos);
             this.Controls.Add(this.lblListar);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "frmListar";
@@ -76,7 +108,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,7 +119,9 @@
 
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Label lblListar;
-        private System.Windows.Forms.DataGridView dgvMarcas;
+        private System.Windows.Forms.PictureBox pbxArticulos;
+        private System.Windows.Forms.DataGridView dgvImagen;
+        private System.Windows.Forms.Label lbImagen;
     }
 }
 

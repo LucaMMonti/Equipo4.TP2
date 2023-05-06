@@ -9,6 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Net;
 using System.Xml.Linq;
 using System.Globalization;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace negocio
 {
@@ -21,20 +22,24 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Select Codigo, Nombre, A.Descripcion, Precio, C.Descripcion as MARCA From ARTICULOS A, CATEGORIAS C Where C.Id = A.IdCategoria");
+                datos.setearConsulta("Select Codigo, Nombre, A.Descripcion, Precio, C.Descripcion CATEGORIA , M.Descripcion Marca, ImagenUrl IMAGEN  From ARTICULOS A, CATEGORIAS C, MARCAS M, IMAGENES I Where C.Id = A.IdCategoria AND M.id = A.idMarca AND I.IdArticulo = A.Id");
                 datos.ejecutarLectura();
 
 
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    Marca marca = new Marca();
+     
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
-                    aux.DescMarca = new Marca();
-                    aux.DescMarca.Descripcion = (string)datos.Lector["MARCA"];
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Descripcion = (string)datos.Lector["CATEGORIA"];
+                    aux.Marca = new Marca();
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    aux.Url = new Imagen();
+                    aux.Url.ImagenUrl = (string)datos.Lector["IMAGEN"];
                     lista.Add(aux);
                 }
                 return lista;

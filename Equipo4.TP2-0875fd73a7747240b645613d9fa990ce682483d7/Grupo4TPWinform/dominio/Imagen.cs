@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace dominio
 {
-    public class Categoria
+    public class Imagen
     {
-        public int iDCategoria { get; set; }
-        public string Descripcion { get; set; }
+        public string ImagenUrl { get; set; }
+        public int idArticulo { get; set; }
+
+        public string Articulo { get; set;  }
+
         public override string ToString()
         {
-            return Descripcion;
+            return ImagenUrl;
         }
-
     }
 }
