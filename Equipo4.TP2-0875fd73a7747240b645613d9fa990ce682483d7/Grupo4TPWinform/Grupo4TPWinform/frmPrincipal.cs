@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,8 +38,9 @@ namespace Grupo4TPWinform
 
         private void modificarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmModificar ventanaModificar = new frmModificar();
-            ventanaModificar.Show();
+
+             
+
         }
 
         private void eliminarArticulosToolStripMenuItem_Click(object sender, EventArgs e)

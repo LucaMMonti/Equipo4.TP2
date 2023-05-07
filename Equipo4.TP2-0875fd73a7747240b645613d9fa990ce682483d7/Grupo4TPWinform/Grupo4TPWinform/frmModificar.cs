@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,8 @@ namespace Grupo4TPWinform
 {
     public partial class frmModificar : Form
     {
-        public frmModificar()
-        {
-            InitializeComponent();
-        }
+        
+       
+
     }
 }

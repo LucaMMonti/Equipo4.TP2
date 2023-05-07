@@ -28,6 +28,7 @@ namespace Grupo4TPWinform
                 ArticuloNegocio negocio = new ArticuloNegocio();
                 listaArt = negocio.listar();
                 dgvArticulos.DataSource = listaArt;
+                dgvArticulos.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -55,6 +56,25 @@ namespace Grupo4TPWinform
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            frmAgregar ventanaModificar = new frmAgregar(seleccionado);
+            ventanaModificar.ShowDialog();
+            
+
+            
+            
 
         }
     }

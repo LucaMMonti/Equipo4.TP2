@@ -14,27 +14,46 @@ namespace Grupo4TPWinform
 {
     public partial class frmAgregar : Form
     {
+        private Articulo articulo = null;
         public frmAgregar()
         {
             InitializeComponent();
         }
 
+        public frmAgregar(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
+        }
+
 
         private void btnAceptar_Click(object sender, EventArgs e) //Funcionalidad botón Aceptar
         {
-            Articulo art = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                art.Codigo = txtCodigo.Text;
-                art.Nombre = txtNombre.Text;
-                art.Descripcion = txtDescripcion.Text;
-                art.Precio = decimal.Parse(txtPrecio.Text);
-                art.Categoria = (Categoria)cbCategoria.SelectedItem;
-                art.Marca = (Marca)cbMarca.SelectedItem;
-                
-                negocio.agregar(art);
+                if (articulo == null)
+                    articulo = new Articulo();
+
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.Precio = decimal.Parse(txtPrecio.Text);
+                articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
+                articulo.Marca = (Marca)cbMarca.SelectedItem;
+
+                if (articulo.id != 0)
+                {
+                    negocio.modificar(articulo);
+                    MessageBox.Show("Articulo modificado exitosamente");
+                }
+                else 
+                { 
+                negocio.agregar(articulo);
                 MessageBox.Show("Articulo agregado exitosamente");
+                }
+
             }
             catch (Exception ex)
             {
@@ -60,21 +79,28 @@ namespace Grupo4TPWinform
             try
             {
                 cbMarca.DataSource = marcaNegocio.listarMarcas();
+                cbMarca.ValueMember = "id";
+                cbMarca.DisplayMember = "Descripcion";
+                cbCategoria.DataSource = catNegocio.listarCategorias();
+                cbCategoria.ValueMember = "iDCategoria";
+                cbCategoria.DisplayMember = "Descripcion";
+
+                if(articulo != null)
+                {
+                    txtCodigo.Text = articulo.Codigo;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    txtNombre.Text = articulo.Nombre;
+                    txtPrecio.Text = articulo.Precio.ToString();
+                    cbMarca.SelectedValue = articulo.Marca.id;
+                    cbCategoria.SelectedValue = articulo.Categoria.iDCategoria;
+                }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
-            try
-            {
-                cbCategoria.DataSource = catNegocio.listarCategorias();
-            }
-            catch (Exception ex)
-            {
-
-            }
+    
         }
 
     }
