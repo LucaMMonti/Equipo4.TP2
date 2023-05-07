@@ -22,9 +22,17 @@ namespace Grupo4TPWinform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArt = negocio.listar();
-            dgvArticulos.DataSource = listaArt;
+
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                listaArt = negocio.listar();
+                dgvArticulos.DataSource = listaArt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         /*
