@@ -50,7 +50,7 @@ namespace Grupo4TPWinform
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(63, 137);
+            this.lblCodigo.Location = new System.Drawing.Point(59, 120);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(58, 17);
             this.lblCodigo.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace Grupo4TPWinform
             // 
             this.lblDecripcion.AutoSize = true;
             this.lblDecripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDecripcion.Location = new System.Drawing.Point(28, 207);
+            this.lblDecripcion.Location = new System.Drawing.Point(59, 290);
             this.lblDecripcion.Name = "lblDecripcion";
             this.lblDecripcion.Size = new System.Drawing.Size(93, 17);
             this.lblDecripcion.TabIndex = 2;
@@ -80,7 +80,7 @@ namespace Grupo4TPWinform
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(45, 282);
+            this.lblCategoria.Location = new System.Drawing.Point(244, 120);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(78, 17);
             this.lblCategoria.TabIndex = 4;
@@ -90,7 +90,7 @@ namespace Grupo4TPWinform
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(67, 243);
+            this.lblPrecio.Location = new System.Drawing.Point(59, 231);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(54, 17);
             this.lblPrecio.TabIndex = 5;
@@ -98,39 +98,40 @@ namespace Grupo4TPWinform
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(127, 137);
+            this.txtCodigo.Location = new System.Drawing.Point(62, 140);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(297, 20);
-            this.txtCodigo.TabIndex = 6;
+            this.txtCodigo.Size = new System.Drawing.Size(139, 20);
+            this.txtCodigo.TabIndex = 0;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(127, 240);
+            this.txtPrecio.Location = new System.Drawing.Point(62, 251);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(297, 20);
-            this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.Size = new System.Drawing.Size(139, 20);
+            this.txtPrecio.TabIndex = 2;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(127, 204);
+            this.txtDescripcion.Location = new System.Drawing.Point(62, 310);
+            this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(297, 20);
-            this.txtDescripcion.TabIndex = 8;
+            this.txtDescripcion.Size = new System.Drawing.Size(297, 55);
+            this.txtDescripcion.TabIndex = 3;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(127, 175);
+            this.txtNombre.Location = new System.Drawing.Point(62, 195);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(297, 20);
-            this.txtNombre.TabIndex = 11;
+            this.txtNombre.Size = new System.Drawing.Size(139, 20);
+            this.txtNombre.TabIndex = 1;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(67, 421);
+            this.btnAceptar.Location = new System.Drawing.Point(62, 392);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(84, 31);
-            this.btnAceptar.TabIndex = 12;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -138,10 +139,10 @@ namespace Grupo4TPWinform
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(352, 419);
+            this.btnCancelar.Location = new System.Drawing.Point(295, 392);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 31);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -149,10 +150,10 @@ namespace Grupo4TPWinform
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(149, 76);
+            this.lblTitulo.Font = new System.Drawing.Font("Montserrat", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(102, 61);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(231, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(230, 27);
             this.lblTitulo.TabIndex = 14;
             this.lblTitulo.Text = "AGREGAR ARTICULO";
             // 
@@ -160,7 +161,7 @@ namespace Grupo4TPWinform
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(69, 319);
+            this.lblMarca.Location = new System.Drawing.Point(244, 175);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(52, 17);
             this.lblMarca.TabIndex = 3;
@@ -170,26 +171,26 @@ namespace Grupo4TPWinform
             // 
             this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(127, 318);
+            this.cbMarca.Location = new System.Drawing.Point(247, 195);
             this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(297, 21);
-            this.cbMarca.TabIndex = 15;
+            this.cbMarca.Size = new System.Drawing.Size(139, 21);
+            this.cbMarca.TabIndex = 5;
             // 
             // cbCategoria
             // 
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(127, 278);
+            this.cbCategoria.Location = new System.Drawing.Point(247, 140);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(297, 21);
-            this.cbCategoria.TabIndex = 16;
+            this.cbCategoria.Size = new System.Drawing.Size(139, 21);
+            this.cbCategoria.TabIndex = 4;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 537);
+            this.ClientSize = new System.Drawing.Size(420, 452);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.cbMarca);
             this.Controls.Add(this.lblTitulo);
@@ -205,6 +206,9 @@ namespace Grupo4TPWinform
             this.Controls.Add(this.lblDecripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(436, 491);
+            this.MinimumSize = new System.Drawing.Size(436, 491);
             this.Name = "frmAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Articulo";

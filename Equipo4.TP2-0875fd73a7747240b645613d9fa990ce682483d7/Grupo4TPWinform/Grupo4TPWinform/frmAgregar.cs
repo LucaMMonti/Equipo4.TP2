@@ -49,7 +49,7 @@ namespace Grupo4TPWinform
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+               
         }
 
         private void frmAgregar_Load(object sender, EventArgs e)
@@ -76,6 +76,7 @@ namespace Grupo4TPWinform
 
             }
         }
+
     }
 }
 
