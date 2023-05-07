@@ -28,11 +28,11 @@ namespace Grupo4TPWinform
             {
                 art.Codigo = txtCodigo.Text;
                 art.Nombre = txtNombre.Text;
-                // art.IdMarca = int.Parse(txtMarca.Text);
-                // art.IdCategoria = int.Parse(txtCategoria.Text);
                 art.Descripcion = txtDescripcion.Text;
                 art.Precio = decimal.Parse(txtPrecio.Text);
-
+                art.Categoria = (Categoria)cbCategoria.SelectedItem;
+                art.Marca = (Marca)cbMarca.SelectedItem;
+                
                 negocio.agregar(art);
                 MessageBox.Show("Articulo agregado exitosamente");
             }
