@@ -31,8 +31,8 @@
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.lblListar = new System.Windows.Forms.Label();
             this.pbxArticulos = new System.Windows.Forms.PictureBox();
-            this.dgvImagen = new System.Windows.Forms.DataGridView();
             this.lbImagen = new System.Windows.Forms.Label();
+            this.dgvImagen = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImagen)).BeginInit();
@@ -68,6 +68,17 @@
             this.pbxArticulos.TabIndex = 2;
             this.pbxArticulos.TabStop = false;
             // 
+            // lbImagen
+            // 
+            this.lbImagen.AutoSize = true;
+            this.lbImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImagen.Location = new System.Drawing.Point(116, 413);
+            this.lbImagen.Name = "lbImagen";
+            this.lbImagen.Size = new System.Drawing.Size(213, 24);
+            this.lbImagen.TabIndex = 4;
+            this.lbImagen.Text = "Visualizador de articulos";
+            this.lbImagen.Click += new System.EventHandler(this.label1_Click);
+            // 
             // dgvImagen
             // 
             this.dgvImagen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -80,17 +91,6 @@
             this.dgvImagen.TabIndex = 3;
             this.dgvImagen.SelectionChanged += new System.EventHandler(this.dgvImagen_SelectionChanged);
             this.dgvImagen.Click += new System.EventHandler(this.dgvImagen_SelectionChanged);
-            // 
-            // lbImagen
-            // 
-            this.lbImagen.AutoSize = true;
-            this.lbImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImagen.Location = new System.Drawing.Point(116, 413);
-            this.lbImagen.Name = "lbImagen";
-            this.lbImagen.Size = new System.Drawing.Size(213, 24);
-            this.lbImagen.TabIndex = 4;
-            this.lbImagen.Text = "Visualizador de articulos";
-            this.lbImagen.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmListar
             // 
@@ -120,8 +120,8 @@
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Label lblListar;
         private System.Windows.Forms.PictureBox pbxArticulos;
-        private System.Windows.Forms.DataGridView dgvImagen;
         private System.Windows.Forms.Label lbImagen;
+        private System.Windows.Forms.DataGridView dgvImagen;
     }
 }
 

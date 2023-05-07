@@ -16,6 +16,7 @@ namespace Grupo4TPWinform
 {
     public partial class frmBuscar : Form
     {
+        private List<Articulo> listaArticulos;
         public frmBuscar()
         {
             InitializeComponent();
@@ -23,126 +24,75 @@ namespace Grupo4TPWinform
 
         private void frmBuscar_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocioListarBusqueda = new ArticuloNegocio();
-            dgvListarBusqueda.DataSource = negocioListarBusqueda.listar();
+            cargar();
+            cboCampo.Items.Add("Codigo");
+            cboCampo.Items.Add("Marca");
+            cboCampo.Items.Add("Precio");
+            cboCampo.Items.Add("Categoria");
+        }
+        private void cargar()
+        {
 
-            /*ArticuloNegocio articulo = new Articulo();
+            ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                cmbBuscarCategoria.DataSource = articulo.listar();
-                cmbBuscarMarca.DataSource = articulo.listar();
+                listaArticulos = negocio.listar();
+                dgvListarBusqueda.DataSource = listaArticulos;
+                //cargarImagen(listaArticulo[0].UrlImagen);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-                throw;
-            }*/
-        }
-   
-        private void btnBuscarNombre_Click(object sender, EventArgs e)
-        {
-            
-            string connectionString = "server =.\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security = true";
-            SqlConnection connection = new SqlConnection(connectionString);
-
-            string query = "SELECT * FROM Articulos WHERE Nombre LIKE '%" + txbBuscarNombre.Text + "%'";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            connection.Open();
-            SqlDataReader datos = command.ExecuteReader();
-            List<Articulo> lista = new List<Articulo>();
-
-            try
-            {
-                while (datos.Read())
-                {
-                    Articulo aux = new Articulo();
-                    //Marca marca = new Marca();
-                    aux.Codigo = (string)datos["Codigo"];
-                    aux.Nombre = (string)datos["Nombre"];
-                    aux.Descripcion = (string)datos["Descripcion"];
-                    aux.Precio = (decimal)datos["Precio"];
-                    //aux.DescMarca = new Marca();
-                    //aux.DescMarca.Descripcion = (string)datos["MARCA"];
-                    lista.Add(aux);
-                }
-
-                dgvListarBusqueda.DataSource = null;
-                dgvListarBusqueda.DataSource = lista;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.Close();
-                connection.Close();
             }
         }
 
-        private void dgvListarBusqueda_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void cmbBuscarMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string opcion = cboCampo.SelectedItem.ToString();
+            if(opcion== "Precio")
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Igual a");
+                cboCriterio.Items.Add("Menor a");
+            }
+            else
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termina con");
+                cboCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private void gpbBuscar_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio art = new ArticuloNegocio();
             try
             {
-                txbDatosCodigo.Text = dgvListarBusqueda.SelectedCells[0].Value.ToString();
-                txbDatoNombre.Text = dgvListarBusqueda.SelectedCells[1].Value.ToString();
-                txbDatoDescripcion.Text = dgvListarBusqueda.SelectedCells[2].Value.ToString();
-                //txbDatoMarca.Text = dgvListarBusqueda.SelectedCells[3].Value.ToString();
-                //txbDatoCategoria.Text = dgvListarBusqueda.SelectedCells[4].Value.ToString();
-                txbDatoPrecio.Text = dgvListarBusqueda.SelectedCells[5].Value.ToString();
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txtFiltroAvanzado.Text;
+                dgvListarBusqueda.DataSource = art.filtar(campo,criterio, filtro);
+
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            
+
 
         }
 
-        private void btnBuscarCodigo_Click(object sender, EventArgs e)
+        private void dgvListarBusqueda_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string connectionString = "server =.\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security = true";
-            SqlConnection connection = new SqlConnection(connectionString);
 
-            string query = "SELECT * FROM Articulos WHERE Codigo LIKE '%" + txtBuscarCodigo.Text + "%'";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            connection.Open();
-            SqlDataReader datos = command.ExecuteReader();
-            List<Articulo> lista = new List<Articulo>();
-
-            try
-            {
-                while (datos.Read())
-                {
-                    Articulo aux = new Articulo();
-                    //Marca marca = new Marca();
-                    aux.Codigo = (string)datos["Codigo"];
-                    aux.Nombre = (string)datos["Nombre"];
-                    aux.Descripcion = (string)datos["Descripcion"];
-                    aux.Precio = (decimal)datos["Precio"];
-                    //aux.DescMarca = new Marca();
-                    //aux.DescMarca.Descripcion = (string)datos["MARCA"];
-                    lista.Add(aux);
-                }
-
-                dgvListarBusqueda.DataSource = null;
-                dgvListarBusqueda.DataSource = lista;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.Close();
-                connection.Close();
-            }
         }
     }
 }

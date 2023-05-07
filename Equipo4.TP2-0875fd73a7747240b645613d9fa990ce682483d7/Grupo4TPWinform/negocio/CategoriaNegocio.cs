@@ -27,8 +27,8 @@ namespace negocio
                 {
                     Categoria aux = new Categoria();
                     aux.iDCategoria = (int)datos.Lector["id"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
-
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        aux.Descripcion = (string)datos.Lector["Descripcion"];
                     listaCategoria.Add(aux);
                 }
                 return listaCategoria;
