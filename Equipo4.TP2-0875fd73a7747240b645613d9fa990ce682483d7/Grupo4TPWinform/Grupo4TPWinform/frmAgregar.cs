@@ -28,7 +28,7 @@ namespace Grupo4TPWinform
             {
                 art.Codigo = txtCodigo.Text;
                 art.Nombre = txtNombre.Text;
-               // art.IdMarca = int.Parse(txtMarca.Text);
+                // art.IdMarca = int.Parse(txtMarca.Text);
                 // art.IdCategoria = int.Parse(txtCategoria.Text);
                 art.Descripcion = txtDescripcion.Text;
                 art.Precio = decimal.Parse(txtPrecio.Text);
@@ -47,6 +47,35 @@ namespace Grupo4TPWinform
             this.Close();
         }
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void frmAgregar_Load(object sender, EventArgs e)
+        {
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio catNegocio = new CategoriaNegocio();
+
+            try
+            {
+                cbMarca.DataSource = marcaNegocio.listarMarcas();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            try
+            {
+                cbCategoria.DataSource = catNegocio.listarCategorias();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }
+
