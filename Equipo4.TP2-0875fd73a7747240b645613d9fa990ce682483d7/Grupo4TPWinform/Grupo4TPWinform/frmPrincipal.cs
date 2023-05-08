@@ -32,8 +32,7 @@ namespace Grupo4TPWinform
 
         private void agregarArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAgregar ventanaAgregar = new frmAgregar();
-            ventanaAgregar.Show();
+
         }
 
         private void modificarArticulosToolStripMenuItem_Click(object sender, EventArgs e)

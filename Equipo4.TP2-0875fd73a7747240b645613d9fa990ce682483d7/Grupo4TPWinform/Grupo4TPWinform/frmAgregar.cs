@@ -25,6 +25,7 @@ namespace Grupo4TPWinform
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar Articulo";
+            
         }
 
 
@@ -45,12 +46,12 @@ namespace Grupo4TPWinform
 
                 if (articulo.id != 0)
                 {
-                    negocio.modificar(articulo);
+                    negocio.Modificar(articulo);
                     MessageBox.Show("Articulo modificado exitosamente");
                 }
                 else 
                 { 
-                negocio.agregar(articulo);
+                negocio.Agregar(articulo);
                 MessageBox.Show("Articulo agregado exitosamente");
                 }
 
@@ -102,6 +103,7 @@ namespace Grupo4TPWinform
             }
     
         }
+
 
     }
 }

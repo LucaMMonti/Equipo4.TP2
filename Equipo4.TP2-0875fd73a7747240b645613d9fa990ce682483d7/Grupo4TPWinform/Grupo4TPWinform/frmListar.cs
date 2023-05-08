@@ -32,7 +32,7 @@ namespace Grupo4TPWinform
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -76,6 +76,33 @@ namespace Grupo4TPWinform
             
             
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Seguro que desea eliminar?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes) { 
+                seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                negocio.Eliminar(seleccionado.id);
+                MessageBox.Show("Eliminado con exito");
+                Form1_Load(sender, e);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregar ventanaAgregar = new frmAgregar();
+            ventanaAgregar.Show();
         }
     }
 }

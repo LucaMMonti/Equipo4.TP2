@@ -23,7 +23,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Select A.Id, Codigo, Nombre, A.Descripcion, Precio, C.Descripcion CATEGORIA , M.Descripcion Marca, ImagenUrl IMAGEN, A.IdMarca, A.IdCategoria  From ARTICULOS A, CATEGORIAS C, MARCAS M, IMAGENES I Where C.Id = A.IdCategoria AND M.id = A.idMarca AND I.IdArticulo = A.Id");
+                datos.setearConsulta("Select A.Id, Codigo, Nombre, A.Descripcion, Precio, C.Descripcion CATEGORIA , M.Descripcion Marca, A.IdMarca, A.IdCategoria  From ARTICULOS A, CATEGORIAS C, MARCAS M Where C.Id = A.IdCategoria AND M.id = A.idMarca");
                 datos.ejecutarLectura();
 
 
@@ -48,9 +48,10 @@ namespace negocio
                     if (!(datos.Lector["Marca"] is DBNull))
                         aux.Marca = new Marca();
                         aux.Marca.Descripcion = (string)datos.Lector["Marca"];
-
-                    aux.Marca.id = (int)datos.Lector["IdMarca"];
-                    aux.Categoria.iDCategoria = (int)datos.Lector["IdCategoria"];
+                    if (!(datos.Lector["IdMarca"] is DBNull))
+                        aux.Marca.id = (int)datos.Lector["IdMarca"];
+                    if (!(datos.Lector["IdCategoria"] is DBNull))
+                        aux.Categoria.iDCategoria = (int)datos.Lector["IdCategoria"];
                     lista.Add(aux);
                 }
                 return lista;
@@ -66,7 +67,7 @@ namespace negocio
         }
 
 
-        public void agregar(Articulo nuevo)
+        public void Agregar(Articulo nuevo)
         {
           AccesoDatos datos = new AccesoDatos();
             try
@@ -86,7 +87,7 @@ namespace negocio
                 datos.cerrarConexion(); 
             }
         }
-        public void modificar(Articulo art)
+        public void Modificar(Articulo art)
         {
             AccesoDatos datos = new AccesoDatos();
             try
@@ -111,16 +112,17 @@ namespace negocio
             }
             finally { datos.cerrarConexion();}
         }
-        public void eliminar(int id)
+        public void Eliminar(int id)
         {
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("dele from Articulos where id = @id");
+                datos.setearConsulta("delete from Articulos where id = @id");
                 datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
             }
             catch(Exception ex)
-            {
+            {   
                 throw ex;   
             }
         }
