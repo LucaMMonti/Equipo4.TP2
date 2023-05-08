@@ -15,6 +15,7 @@ namespace Grupo4TPWinform
     public partial class frmAgregar : Form
     {
         private Articulo articulo = null;
+        private Imagen imagen;
         public frmAgregar()
         {
             InitializeComponent();
@@ -25,17 +26,19 @@ namespace Grupo4TPWinform
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar Articulo";
-            
+
         }
 
 
         private void btnAceptar_Click(object sender, EventArgs e) //Funcionalidad botón Aceptar
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
+            ImagenNegocio negocioPic = new ImagenNegocio();
             try
             {
                 if (articulo == null)
                     articulo = new Articulo();
+                    imagen = new Imagen();
 
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
@@ -43,17 +46,24 @@ namespace Grupo4TPWinform
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
                 articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
                 articulo.Marca = (Marca)cbMarca.SelectedItem;
+                imagen.ImagenUrl = txtImagen.Text;
+                
 
                 if (articulo.id != 0)
                 {
                     negocio.Modificar(articulo);
+                    negocioPic.Modificar(imagen);
                     MessageBox.Show("Articulo modificado exitosamente");
+
                 }
-                else 
-                { 
-                negocio.Agregar(articulo);
-                MessageBox.Show("Articulo agregado exitosamente");
+                else
+                {
+                    negocio.Agregar(articulo);
+                    MessageBox.Show("Articulo agregado exitosamente");
                 }
+
+                negocioPic.Agregar(imagen, articulo.id);
+                Close();
 
             }
             catch (Exception ex)
@@ -69,7 +79,7 @@ namespace Grupo4TPWinform
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-               
+
         }
 
         private void frmAgregar_Load(object sender, EventArgs e)
@@ -86,7 +96,7 @@ namespace Grupo4TPWinform
                 cbCategoria.ValueMember = "iDCategoria";
                 cbCategoria.DisplayMember = "Descripcion";
 
-                if(articulo != null)
+                if (articulo != null)
                 {
                     txtCodigo.Text = articulo.Codigo;
                     txtDescripcion.Text = articulo.Descripcion;
@@ -101,7 +111,26 @@ namespace Grupo4TPWinform
             {
                 MessageBox.Show(ex.ToString());
             }
-    
+
+        }
+
+        private void txtImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagen.Text);
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+
+                pbxArticulo.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
         }
 
 

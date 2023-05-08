@@ -10,9 +10,6 @@ namespace dominio
     {
         public string ImagenUrl { get; set; }
         public int idArticulo { get; set; }
-
-        public string Articulo { get; set;  }
-
         public override string ToString()
         {
             return ImagenUrl;

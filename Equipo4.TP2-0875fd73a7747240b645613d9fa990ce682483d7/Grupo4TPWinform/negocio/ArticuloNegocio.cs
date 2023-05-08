@@ -52,6 +52,7 @@ namespace negocio
                         aux.Marca.id = (int)datos.Lector["IdMarca"];
                     if (!(datos.Lector["IdCategoria"] is DBNull))
                         aux.Categoria.iDCategoria = (int)datos.Lector["IdCategoria"];
+                   
                     lista.Add(aux);
                 }
                 return lista;
@@ -87,7 +88,7 @@ namespace negocio
                 datos.cerrarConexion(); 
             }
         }
-        public void Modificar(Articulo art)
+        public void Modificar(Articulo art) 
         {
             AccesoDatos datos = new AccesoDatos();
             try

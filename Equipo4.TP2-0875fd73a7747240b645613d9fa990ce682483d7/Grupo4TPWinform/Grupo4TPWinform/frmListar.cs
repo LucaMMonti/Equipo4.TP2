@@ -71,10 +71,8 @@ namespace Grupo4TPWinform
 
             frmAgregar ventanaModificar = new frmAgregar(seleccionado);
             ventanaModificar.ShowDialog();
-            
+            Form1_Load(sender, e);
 
-            
-            
 
         }
 
@@ -103,6 +101,12 @@ namespace Grupo4TPWinform
         {
             frmAgregar ventanaAgregar = new frmAgregar();
             ventanaAgregar.Show();
+        }
+
+
+        private void pbxArticulos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
