@@ -39,18 +39,6 @@ namespace Grupo4TPWinform
             }
         }
 
-        
-
-        private void dgvImagen_SelectionChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
@@ -77,13 +65,14 @@ namespace Grupo4TPWinform
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿Seguro que desea eliminar?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(respuesta == DialogResult.Yes) { 
-                seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                negocio.Eliminar(seleccionado.id);
-                MessageBox.Show("Eliminado con exito");
-                Form1_Load(sender, e);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    negocio.Eliminar(seleccionado.id);
+                    MessageBox.Show("Eliminado con exito");
+                    Form1_Load(sender, e);
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -98,10 +87,13 @@ namespace Grupo4TPWinform
         }
 
 
-        private void pbxArticulos_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            frmBuscar ventanaBuscar = new frmBuscar();
+            ventanaBuscar.Show();
         }
+
+
 
         //private void cargarImagen(string imagen)
         //{

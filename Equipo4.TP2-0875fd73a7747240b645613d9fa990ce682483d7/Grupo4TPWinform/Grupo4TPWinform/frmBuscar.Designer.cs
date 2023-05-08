@@ -68,6 +68,8 @@ namespace Grupo4TPWinform
             this.gpbBuscar.Controls.Add(this.lblCategoria);
             this.gpbBuscar.Controls.Add(this.lblMarca);
             this.gpbBuscar.Controls.Add(this.lbCampo);
+            this.gpbBuscar.Font = new System.Drawing.Font("Montserrat", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbBuscar.ForeColor = System.Drawing.Color.White;
             this.gpbBuscar.Location = new System.Drawing.Point(23, 21);
             this.gpbBuscar.Name = "gpbBuscar";
             this.gpbBuscar.Size = new System.Drawing.Size(569, 133);
@@ -80,7 +82,7 @@ namespace Grupo4TPWinform
             // 
             this.txtFiltroAvanzado.Location = new System.Drawing.Point(114, 82);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
-            this.txtFiltroAvanzado.Size = new System.Drawing.Size(340, 20);
+            this.txtFiltroAvanzado.Size = new System.Drawing.Size(340, 21);
             this.txtFiltroAvanzado.TabIndex = 15;
             // 
             // cboCriterio
@@ -89,7 +91,7 @@ namespace Grupo4TPWinform
             this.cboCriterio.FormattingEnabled = true;
             this.cboCriterio.Location = new System.Drawing.Point(114, 55);
             this.cboCriterio.Name = "cboCriterio";
-            this.cboCriterio.Size = new System.Drawing.Size(340, 21);
+            this.cboCriterio.Size = new System.Drawing.Size(340, 23);
             this.cboCriterio.TabIndex = 14;
             // 
             // cboCampo
@@ -98,18 +100,22 @@ namespace Grupo4TPWinform
             this.cboCampo.FormattingEnabled = true;
             this.cboCampo.Location = new System.Drawing.Point(114, 28);
             this.cboCampo.Name = "cboCampo";
-            this.cboCampo.Size = new System.Drawing.Size(340, 21);
+            this.cboCampo.Size = new System.Drawing.Size(340, 23);
             this.cboCampo.TabIndex = 12;
             this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarMarca_SelectedIndexChanged);
             // 
             // btnFiltro
             // 
+            this.btnFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(148)))));
+            this.btnFiltro.FlatAppearance.BorderSize = 0;
+            this.btnFiltro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(48)))));
+            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltro.Location = new System.Drawing.Point(473, 80);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(75, 23);
             this.btnFiltro.TabIndex = 11;
             this.btnFiltro.Text = "Buscar";
-            this.btnFiltro.UseVisualStyleBackColor = true;
+            this.btnFiltro.UseVisualStyleBackColor = false;
             this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
             // 
             // lblCategoria
@@ -117,7 +123,7 @@ namespace Grupo4TPWinform
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(21, 85);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(82, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(91, 15);
             this.lblCategoria.TabIndex = 9;
             this.lblCategoria.Text = "Filtro avanzado:";
             // 
@@ -126,7 +132,7 @@ namespace Grupo4TPWinform
             this.lblMarca.AutoSize = true;
             this.lblMarca.Location = new System.Drawing.Point(61, 58);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(42, 13);
+            this.lblMarca.Size = new System.Drawing.Size(49, 15);
             this.lblMarca.TabIndex = 6;
             this.lblMarca.Text = "Criterio:";
             // 
@@ -135,12 +141,13 @@ namespace Grupo4TPWinform
             this.lbCampo.AutoSize = true;
             this.lbCampo.Location = new System.Drawing.Point(60, 31);
             this.lbCampo.Name = "lbCampo";
-            this.lbCampo.Size = new System.Drawing.Size(43, 13);
+            this.lbCampo.Size = new System.Drawing.Size(49, 15);
             this.lbCampo.TabIndex = 0;
             this.lbCampo.Text = "Campo:";
             // 
             // dgvListarBusqueda
             // 
+            this.dgvListarBusqueda.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(148)))));
             this.dgvListarBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListarBusqueda.Location = new System.Drawing.Point(23, 200);
             this.dgvListarBusqueda.Name = "dgvListarBusqueda";
@@ -153,9 +160,11 @@ namespace Grupo4TPWinform
             // lblArticulosBuscados
             // 
             this.lblArticulosBuscados.AutoSize = true;
+            this.lblArticulosBuscados.Font = new System.Drawing.Font("Montserrat", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticulosBuscados.ForeColor = System.Drawing.Color.White;
             this.lblArticulosBuscados.Location = new System.Drawing.Point(23, 181);
             this.lblArticulosBuscados.Name = "lblArticulosBuscados";
-            this.lblArticulosBuscados.Size = new System.Drawing.Size(97, 13);
+            this.lblArticulosBuscados.Size = new System.Drawing.Size(108, 15);
             this.lblArticulosBuscados.TabIndex = 2;
             this.lblArticulosBuscados.Text = "Articulos Buscados";
             // 
@@ -174,6 +183,8 @@ namespace Grupo4TPWinform
             this.gpbDatos.Controls.Add(this.lblDatoNombre);
             this.gpbDatos.Controls.Add(this.txbDatosCodigo);
             this.gpbDatos.Controls.Add(this.lblDatosCodigo);
+            this.gpbDatos.Font = new System.Drawing.Font("Montserrat", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbDatos.ForeColor = System.Drawing.Color.White;
             this.gpbDatos.Location = new System.Drawing.Point(23, 343);
             this.gpbDatos.Name = "gpbDatos";
             this.gpbDatos.Size = new System.Drawing.Size(703, 177);
@@ -186,7 +197,7 @@ namespace Grupo4TPWinform
             this.txbDatoCategoria.Location = new System.Drawing.Point(369, 48);
             this.txbDatoCategoria.Name = "txbDatoCategoria";
             this.txbDatoCategoria.ReadOnly = true;
-            this.txbDatoCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txbDatoCategoria.Size = new System.Drawing.Size(100, 21);
             this.txbDatoCategoria.TabIndex = 14;
             // 
             // txbDatoMarca
@@ -194,7 +205,7 @@ namespace Grupo4TPWinform
             this.txbDatoMarca.Location = new System.Drawing.Point(369, 23);
             this.txbDatoMarca.Name = "txbDatoMarca";
             this.txbDatoMarca.ReadOnly = true;
-            this.txbDatoMarca.Size = new System.Drawing.Size(100, 20);
+            this.txbDatoMarca.Size = new System.Drawing.Size(100, 21);
             this.txbDatoMarca.TabIndex = 13;
             // 
             // pbxImagenBuscar
@@ -209,9 +220,9 @@ namespace Grupo4TPWinform
             // lblDatoDescipcion
             // 
             this.lblDatoDescipcion.AutoSize = true;
-            this.lblDatoDescipcion.Location = new System.Drawing.Point(8, 112);
+            this.lblDatoDescipcion.Location = new System.Drawing.Point(6, 112);
             this.lblDatoDescipcion.Name = "lblDatoDescipcion";
-            this.lblDatoDescipcion.Size = new System.Drawing.Size(63, 13);
+            this.lblDatoDescipcion.Size = new System.Drawing.Size(69, 15);
             this.lblDatoDescipcion.TabIndex = 11;
             this.lblDatoDescipcion.Text = "Descipcion:";
             // 
@@ -229,7 +240,7 @@ namespace Grupo4TPWinform
             this.txbDatoPrecio.Location = new System.Drawing.Point(75, 74);
             this.txbDatoPrecio.Name = "txbDatoPrecio";
             this.txbDatoPrecio.ReadOnly = true;
-            this.txbDatoPrecio.Size = new System.Drawing.Size(210, 20);
+            this.txbDatoPrecio.Size = new System.Drawing.Size(210, 21);
             this.txbDatoPrecio.TabIndex = 9;
             // 
             // lblDatoPrecio
@@ -237,7 +248,7 @@ namespace Grupo4TPWinform
             this.lblDatoPrecio.AutoSize = true;
             this.lblDatoPrecio.Location = new System.Drawing.Point(31, 78);
             this.lblDatoPrecio.Name = "lblDatoPrecio";
-            this.lblDatoPrecio.Size = new System.Drawing.Size(40, 13);
+            this.lblDatoPrecio.Size = new System.Drawing.Size(44, 15);
             this.lblDatoPrecio.TabIndex = 8;
             this.lblDatoPrecio.Text = "Precio:";
             // 
@@ -246,7 +257,7 @@ namespace Grupo4TPWinform
             this.lblDatoCategoria.AutoSize = true;
             this.lblDatoCategoria.Location = new System.Drawing.Point(308, 52);
             this.lblDatoCategoria.Name = "lblDatoCategoria";
-            this.lblDatoCategoria.Size = new System.Drawing.Size(55, 13);
+            this.lblDatoCategoria.Size = new System.Drawing.Size(62, 15);
             this.lblDatoCategoria.TabIndex = 5;
             this.lblDatoCategoria.Text = "Categoria:";
             // 
@@ -255,7 +266,7 @@ namespace Grupo4TPWinform
             this.lblDatoMarca.AutoSize = true;
             this.lblDatoMarca.Location = new System.Drawing.Point(323, 26);
             this.lblDatoMarca.Name = "lblDatoMarca";
-            this.lblDatoMarca.Size = new System.Drawing.Size(40, 13);
+            this.lblDatoMarca.Size = new System.Drawing.Size(42, 15);
             this.lblDatoMarca.TabIndex = 4;
             this.lblDatoMarca.Text = "Marca:";
             // 
@@ -264,7 +275,7 @@ namespace Grupo4TPWinform
             this.txbDatoNombre.Location = new System.Drawing.Point(75, 48);
             this.txbDatoNombre.Name = "txbDatoNombre";
             this.txbDatoNombre.ReadOnly = true;
-            this.txbDatoNombre.Size = new System.Drawing.Size(210, 20);
+            this.txbDatoNombre.Size = new System.Drawing.Size(210, 21);
             this.txbDatoNombre.TabIndex = 3;
             // 
             // lblDatoNombre
@@ -272,7 +283,7 @@ namespace Grupo4TPWinform
             this.lblDatoNombre.AutoSize = true;
             this.lblDatoNombre.Location = new System.Drawing.Point(24, 51);
             this.lblDatoNombre.Name = "lblDatoNombre";
-            this.lblDatoNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblDatoNombre.Size = new System.Drawing.Size(55, 15);
             this.lblDatoNombre.TabIndex = 2;
             this.lblDatoNombre.Text = "Nombre:";
             // 
@@ -281,7 +292,7 @@ namespace Grupo4TPWinform
             this.txbDatosCodigo.Location = new System.Drawing.Point(75, 22);
             this.txbDatosCodigo.Name = "txbDatosCodigo";
             this.txbDatosCodigo.ReadOnly = true;
-            this.txbDatosCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txbDatosCodigo.Size = new System.Drawing.Size(100, 21);
             this.txbDatosCodigo.TabIndex = 1;
             // 
             // lblDatosCodigo
@@ -289,7 +300,7 @@ namespace Grupo4TPWinform
             this.lblDatosCodigo.AutoSize = true;
             this.lblDatosCodigo.Location = new System.Drawing.Point(28, 26);
             this.lblDatosCodigo.Name = "lblDatosCodigo";
-            this.lblDatosCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblDatosCodigo.Size = new System.Drawing.Size(49, 15);
             this.lblDatosCodigo.TabIndex = 0;
             this.lblDatosCodigo.Text = "Codigo:";
             // 
@@ -297,6 +308,7 @@ namespace Grupo4TPWinform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(148)))));
             this.ClientSize = new System.Drawing.Size(782, 532);
             this.Controls.Add(this.gpbDatos);
             this.Controls.Add(this.lblArticulosBuscados);
